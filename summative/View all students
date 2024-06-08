@@ -1,0 +1,4 @@
+view_students() {
+    echo "List of student records:"
+    cat $FILE
+}
