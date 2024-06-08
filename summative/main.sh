@@ -33,3 +33,15 @@ view_students() {
     echo "List of student records:"
     cat $FILE
 }
+
+# Function to delete a student record
+delete_student_record() {
+    echo "Enter student ID to delete:"
+    read id
+    if [ -f $FILE ]; then
+        grep -v ",$id\$" $FILE > temp.txt && mv temp.txt $FILE
+        echo "Student record deleted successfully."
+    else
+        echo "No student records found."
+    fi
+}
