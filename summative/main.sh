@@ -45,3 +45,18 @@ delete_student_record() {
         echo "No student records found."
     fi
 }
+
+# Main loop to display menu and handle user input
+while true; do
+    display_menu
+    echo "Select an option:"
+    read option
+    case $option in
+        1) create_student ;;
+        2) view_students ;;
+        3) delete_student ;;
+        4) update_student ;;
+        5) exit 0 ;;
+        *) echo "Invalid option, please try again." ;;
+    esac
+done
