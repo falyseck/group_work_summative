@@ -45,3 +45,35 @@ delete_student_record() {
         echo "No student records found."
     fi
 }
+<<<<<<< HEAD
+
+=======
+#update the student record by id
+update_student() {
+    echo "Enter the student ID to update:"
+    read id
+    grep -v ", $id\$" $FILE > temp.txt
+    mv temp.txt $FILE
+    echo "Enter the new student's email:"
+    read new_email
+    echo "Enter the new student's age:"
+    read new_age
+    echo "$new_email, $new_age, $id" >> $FILE
+    echo "Student record updated successfully!"
+}
+>>>>>>> e3c49fb480c3520582f96060ac1b4964c6eb98d3
+# Main loop to display menu and handle user input
+while true; do
+    display_menu
+    echo "Select an option:"
+    read option
+    case $option in
+        1) create_student ;;
+        2) view_students ;;
+        3) delete_student ;;
+        4) update_student ;;
+        5) exit 0 ;;
+        *) echo "Invalid option, please try again." ;;
+    esac
+done
+
