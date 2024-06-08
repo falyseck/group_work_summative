@@ -45,9 +45,9 @@ delete_student_record() {
         echo "No student records found."
     fi
 }
-<<<<<<< HEAD
 
-=======
+
+
 #update the student record by id
 update_student() {
     echo "Enter the student ID to update:"
@@ -61,7 +61,7 @@ update_student() {
     echo "$new_email, $new_age, $id" >> $FILE
     echo "Student record updated successfully!"
 }
->>>>>>> e3c49fb480c3520582f96060ac1b4964c6eb98d3
+
 # Main loop to display menu and handle user input
 while true; do
     display_menu
