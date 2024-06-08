@@ -28,3 +28,8 @@ create_student() {
     echo "$email, $age, $id" >> $FILE
     echo "Student record created successfully!"
 }
+# View all student records
+view_students() {
+    echo "List of student records:"
+    cat $FILE
+}
