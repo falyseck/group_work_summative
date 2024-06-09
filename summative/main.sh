@@ -2,6 +2,8 @@
 
 # File to store student records
 FILE="students-list_1023.txt"
+SELECT_EMAILS_SCRIPT="select-emails.sh"
+STUDENT_EMAILS_FILE="student-emails.txt"
 
 # Check if the file exists, otherwise create it
 if [ ! -f $FILE ]; then
@@ -10,11 +12,15 @@ fi
 
 # Display the menu
 display_menu() {
+    echo "----------------------------
+ALU REGISTRATION SYSTEM
+----------------------------"
     echo "1. Create student record"
     echo "2. View all student records"
     echo "3. Delete a student record"
     echo "4. Update a student record"
-    echo "5. Exit"
+    echo "5. Select email"
+    echo "6. Exit"
 }
 
 # Create a new student record
@@ -45,9 +51,9 @@ delete_student_record() {
         echo "No student records found."
     fi
 }
-<<<<<<< HEAD
 
-=======
+
+
 #update the student record by id
 update_student() {
     echo "Enter the student ID to update:"
@@ -61,7 +67,13 @@ update_student() {
     echo "$new_email, $new_age, $id" >> $FILE
     echo "Student record updated successfully!"
 }
->>>>>>> e3c49fb480c3520582f96060ac1b4964c6eb98d3
+
+#select email 
+select_email() {
+     ./"$SELECT_EMAILS_SCRIPT" "$FILE" > "$STUDENT_EMAILS_FILE"
+            echo "Student emails saved to $STUDENT_EMAILS_FILE"
+    }
+
 # Main loop to display menu and handle user input
 while true; do
     display_menu
@@ -72,7 +84,8 @@ while true; do
         2) view_students ;;
         3) delete_student ;;
         4) update_student ;;
-        5) exit 0 ;;
+        5) select_email ;;
+	6) exit ;;
         *) echo "Invalid option, please try again." ;;
     esac
 done
