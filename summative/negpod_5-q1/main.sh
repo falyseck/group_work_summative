@@ -5,6 +5,9 @@ SELECT_EMAILS_SCRIPT="select-emails.sh"
 STUDENT_EMAILS_FILE="student-emails.txt"
 
 while true; do
+    echo "----------------
+ALU REGISTRATION
+---------------"
     echo "Choose an option:"
     echo "1. Create student record"
     echo "2. View all students"

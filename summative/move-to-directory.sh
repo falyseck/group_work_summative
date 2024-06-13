@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY_NAME="negpod_id-q1"
+DIRECTORY_NAME="negpod_5-q1"
 FILES=("main.sh" "students-list_1023.txt" "select-emails.sh" "student-emails.txt")
 
 # Create the directory if it doesn't exist
