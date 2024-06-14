@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STUDENTS_FILE="students-list_1023.txt"
+STUDENTS_FILE="students-list_0524.txt"
 SELECT_EMAILS_SCRIPT="select-emails.sh"
 STUDENT_EMAILS_FILE="student-emails.txt"
 
