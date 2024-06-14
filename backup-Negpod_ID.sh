@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-LOCAL_DIR="/group_work_summative/negpod_id-q1"
+LOCAL_DIR="~/group_work_summative/Negpod_id-q1"
 REMOTE_HOST="ec1ebc754f75.a5efec7a.alu-cod.online"
 REMOTE_USER="ec1ebc754f75"
 REMOTE_PASS="ea1d8f222b11d7be18f6"
